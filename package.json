@@ -26,9 +26,10 @@
     "webpack-dev-server": "^3.1.1"
   },
   "scripts": {
+    "lint": "eslint --ext .js,.jsx ./frontend",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server ./frontend/App.js --output-filename ./dist/App.bundle.js --mode development --open --hot",
-    "build": "webpack ./frontend/App.js --output-filename ./dist/App.bundle.js --mode production"
+    "start": "webpack-dev-server ./frontend/App.jsx --output-filename ./dist/App.bundle.js --mode development --open --hot",
+    "build": "webpack --config webpack.production.config.js ./frontend/App.jsx --output-filename ./dist/bundle-[chunkhash].js --mode production"
   },
   "repository": {
     "type": "git",
