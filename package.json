@@ -2,7 +2,7 @@
   "name": "zuma",
   "version": "1.0.0",
   "description": "A web application that provides educational and safe Youtube content for kids.",
-  "main": "index.js",
+  "main": "App.jsx",
   "dependencies": {
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
@@ -29,7 +29,7 @@
     "lint": "eslint --ext .js,.jsx ./frontend",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server ./frontend/App.jsx --output-filename ./dist/App.bundle.js --mode development --open --hot",
-    "build": "webpack --config webpack.production.config.js ./frontend/App.jsx --output-filename ./dist/bundle-[chunkhash].js --mode production"
+    "build": "webpack --config webpack.production.config.js ./frontend/App.jsx --mode production"
   },
   "repository": {
     "type": "git",

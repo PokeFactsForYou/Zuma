@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -6,6 +7,11 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+    output: {
+        publicPath: './',
+        path: path.join(__dirname, 'src', 'main', 'resources', 'static'),
+        filename: 'bundle-[chunkhash].js'
+    },
     resolve: {
         extensions: ['.js', '.jsx']
     },
