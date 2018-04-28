@@ -8,7 +8,9 @@ const divStyle = {
 
 const Home = () => (
   <div style={divStyle}>
-    This is our first component!!!!!!!
+    <button className="video-button">Video</button>
+    <button className="music-button">Music</button>
+    <button className="learning-button">Learning</button>
   </div>
 )
 

@@ -25,6 +25,8 @@
     "eslint-plugin-mocha": "^5.0.0",
     "eslint-plugin-react": "^7.7.0",
     "html-webpack-plugin": "^3.1.0",
+    "jsdom": "11.9.0",
+    "jsdom-global": "3.0.2",
     "mocha": "^5.1.1",
     "sinon": "^4.5.0",
     "style-loader": "^0.20.3",
@@ -34,7 +36,7 @@
   },
   "scripts": {
     "lint": "eslint --ext .js,.jsx ./frontend",
-    "test": "mocha  --require babel-core/register --reporter landing ./frontend/tests/*.test.jsx",
+    "test": "mocha  --require babel-core/register --reporter landing ./frontend/specs/*.spec.jsx",
     "start": "webpack-dev-server ./frontend/App.jsx --output-filename ./dist/App.bundle.js --mode development --open --hot",
     "build": "webpack --config webpack.production.config.js ./frontend/App.jsx --mode production"
   },
