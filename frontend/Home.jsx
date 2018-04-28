@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './components/Button'
 
 
 const divStyle = {
@@ -8,9 +9,9 @@ const divStyle = {
 
 const Home = () => (
   <div style={divStyle}>
-    <button className="video-button">Video</button>
-    <button className="music-button">Music</button>
-    <button className="learning-button">Learning</button>
+    <Button value="Video" />
+    <Button value="Music" />
+    <Button value="Learning" />
   </div>
 )
 

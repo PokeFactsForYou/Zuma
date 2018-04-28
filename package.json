@@ -4,6 +4,7 @@
   "description": "A web application that provides educational and safe Youtube content for kids.",
   "main": "App.jsx",
   "dependencies": {
+    "prop-types": "^15.6.1",
     "react": "^16.3.0",
     "react-dom": "^16.3.0"
   },
