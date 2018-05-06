@@ -1,13 +1,13 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./frontend/index.html",
-  filename: "./index.html"
-});
+  template: './frontend/index.html',
+  filename: './index.html',
+})
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -15,14 +15,17 @@ module.exports = {
         test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: 'babel-loader',
+        },
       },
       {
-          test: /\.css$/,
-          use: ["style-loader", "css-loader"]
-      }
-    ]
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
-  plugins: [htmlPlugin]
-};
+  devServer: {
+    historyApiFallback: true,
+  },
+  plugins: [htmlPlugin],
+}
